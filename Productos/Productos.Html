@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="Productos.css">
+    <title>Productos - Veterinaria M&L</title>
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+<header class="header-contenedor">
+
+    <nav class="nav_header">
+
+            <button id="btnMenu" class="btn-menu">
+                ☰
+            </button>
+
+            <img src="/Categorias/Imagenes_Inicio/imagen.png" 
+            alt="Logo Veterinaria M&L" 
+            class="logo">
+
+            <h1 class="titulo">
+                Veterinaria M&L
+            </h1>
+
+            
+            <div class="header-usuario perfil_improvisado">
+                    <img src="/Inicio/Imagenes_Inicio/porfile1.jpg" alt="Usuario">
+                    <div class="info-usuario perfil_improvisado">
+                        
+                        <a class="saludo perfil_improvisado" onclick="window.location.href='.././Perfil_Usuario/Perfil.Html'">Hola,</a>
+                        <h4 id="nombreHeader" class="perfil_improvisado"></h4>
+                        <span id="rolHeader" class="rol-header perfil_improvisado">Administrador</span>
+                        
+                    </div>
+                </div>
+
+        </nav>
+    </nav>
+
+</header>
+
+<section class="section-contenedor">
+
+ <div class="sidebar"> 
+
+<ul class="sidebar_ul">
+
+<li>
+    <a class="perfil_link" href="../Inicio/Index.html">
+        <img alt="Inicio" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inicio.svg">
+        Inicio
+    </a>
+</li>
+
+<li class="dropdown">
+
+<button class="dropdown-btn">
+    <img alt="Productos" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/producto.svg">
+    Productos
+</button>
+
+<ul class="submenu">
+
+    <li>
+        <a class="perfil_link" href="/Productos/RegistrarProducto.html"> 
+            Registrar Producto
+        </a>
+    </li>
+
+    <li>
+        <a class="perfil_link" href="../Productos/Productos.Html">
+            Lista de Productos
+        </a>
+    </li>
+
+</ul>
+
+</li>
+
+<li class="dropdown">
+
+<button class="dropdown-btn">
+    <img alt="Categorias" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/categorias.svg">
+    Categorias
+</button>
+
+<ul class="submenu">
+
+    <li>
+        <a class="perfil_link" href="/Categorias/AgregarCategoria.html"> 
+            Registrar Categoría
+        </a>
+    </li>
+
+    <li>
+        <a class="perfil_link" href="../Categorias/Categorias.Html">
+            Lista de Categorías
+        </a>
+    </li>
+
+</ul>
+
+</li>
+
+<li class="dropdown">
+
+<button class="dropdown-btn">
+    <img alt="Proveedores" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/proovedor.svg">
+    Proveedores
+</button>
+
+<ul class="submenu">
+
+    <li>
+        <a class="perfil_link" href="/Proovedores/RegistrarProveedor.html"> 
+            Registrar Proveedor
+        </a>
+    </li>
+
+    <li>
+        <a class="perfil_link" href="../Proovedores/Proovedores.Html">
+            Lista de Proveedores
+        </a>
+    </li>
+
+</ul>
+
+</li>
+
+<li class="dropdown">
+
+<button class="dropdown-btn">
+    <img alt="Inventario" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inventario.svg">
+    Inventario
+</button>
+
+<ul class="submenu">
+<!--        
+    <li>
+        <a class="perfil_link" href="../Ventas/Ventas.Html">
+            Historial de Ventas 
+        </a>
+    </li>
+
+    <li>
+        <a class="perfil_link" href="../Compras/Compras.Html">
+            Historial de Compras
+        </a>
+    </li>
+-->    
+    <li>
+        <a class="perfil_link" href="../Inventario/Inventario.Html">
+            Inventario Actual
+        </a>
+    </li>
+
+</ul>
+
+</li>
+
+<li class="dropdown">
+
+<button class="dropdown-btn">
+    <img alt="Ventas" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/Ventas_original.svg">
+    Ventas
+</button>
+
+<ul class="submenu">
+
+    <li>
+        <a class="perfil_link" href="../Ventas/AgregarVenta.html"> 
+            Realizar Venta
+        </a>
+    </li>
+
+    <li>
+        <a class="perfil_link" href="../Ventas/Ventas.Html">
+            Historial de Ventas
+        </a>
+    </li>
+
+</ul>
+
+</li>
+
+<li class="dropdown">
+
+<button class="dropdown-btn">
+    <img alt="Compras" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/compras.svg">
+    Compras
+</button>
+
+<ul class="submenu">
+
+    <li>
+        <a class="perfil_link" href="/Compras/AgregarCompra.Html">
+            Realizar Compra
+        </a>
+    </li>
+
+    <li>
+        <a class="perfil_link" href="../Compras/Compras.Html">
+            Historial de Compras
+        </a>
+    </li>
+
+</ul>
+
+</li>
+
+</ul>
+        
+
+            
+
+                <!-- Link para ir a perfil de usuario-->                
+                <div class="perfil">
+                        <a class="perfil_link" id="logout">
+                        <img class="Icons_Inicio" alt="Perfil"
+                            src="../Inicio/Imagenes_Inicio/Iconos/logout.svg">
+                        <p class="Text_LinkPerfil">Cerrar Sesion</p>
+                    </a> 
+                </div>
+            </div>
+
+<!--contenido principal de inicio de producto y la tabla-->
+<div class="contenido_inicio">
+
+    <h1 class="titulo-modulo">
+        Gestión de Productos
+    </h1>
+
+<div class="productos-header">
+
+<div class="contenedor-btn">
+
+    <button class="btn-agregar" onclick="window.location.href='RegistrarProducto.html'">
+        + Agregar Producto
+    </button>
+
+</div>
+
+
+<input 
+    type="text" 
+    placeholder="Buscar producto..." 
+    class="buscador"
+    id="buscarProducto"
+>
+
+</div>
+
+<div class="tabla-contenedor">
+
+<table class="tabla-productos">
+
+<thead>
+
+<tr>
+
+<th>Producto</th>
+
+<th>Descripción</th>
+<th>Categoría</th>
+<th>Acciones</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tablaProductos">
+
+    <tr>
+        <td colspan="3">Cargando productos...</td>
+    </tr>
+
+</tbody>
+
+</table>
+<!-- paginacion / habilitar cuando allan mas registros de productos--> 
+
+<div class="paginacion">
+
+    <button id="btnAnterior">
+        ⬅ Anterior
+    </button>
+
+    <span id="paginaActual">
+        Página 1
+    </span>
+
+    <button id="btnSiguiente">
+        Siguiente ➡
+    </button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+</footer>
+
+</div>
+
+<!-- <script src="./paginacion.js"></script> Habilitar cuando se agreguen ms productos -->
+<script src="../shared/CodeGeneralInterface.js/Menu.js"></script>
+<script src="../shared/CodeGeneralInterface.js/Sidebar.js"></script>
+<script src="../shared/CodeGeneralInterface.js/Sesion.js"></script>
+  <script src="../shared/CodeGeneralInterface.js/logout.js"></script>
+
+<script type="module" src="../shared/CodeGeneralInterface.js/Endpoints/producto.js"></script>
+
+</body>
+</html>

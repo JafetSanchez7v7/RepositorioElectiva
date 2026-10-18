@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Compra - Veterinaria M&L</title>
+    <link rel="stylesheet" href="RealizarCompra.CSS">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header-contenedor">
+            <nav class="nav_header">
+                <button id="btnMenu" class="btn-menu">☰</button>
+                <img src="/Compras/Imagenes_Inicio/imagen.png" alt="Logo Veterinaria M&L" class="logo">
+                <h1 class="titulo">Veterinaria M&L</h1>
+            </nav>
+        </header>
+
+        <section class="section-contenedor">
+            
+            <div class="sidebar">
+                <ul class="sidebar_ul">
+                    <li>
+                        <a class="perfil_link" href="../Inicio/Index.html">
+                            <img alt="Inicio" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inicio.svg">
+                            Inicio
+                        </a>
+                    </li>
+                    
+                    
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Productos" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/producto.svg">
+                            Productos
+                        </button>
+                        <ul class="submenu">
+                            <li><a class="perfil_link" href="/Productos/RegistrarProducto.html">Registrar Producto</a></li>
+                            <li><a class="perfil_link" href="../Productos/Productos.Html">Lista de Productos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Categorias" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/categorias.svg">
+                            Categorias
+                        </button>
+                        <ul class="submenu">
+                            <li><a class="perfil_link" href="/Categorias/AgregarCategoria.html">Registrar Categoría</a></li>
+                            <li><a class="perfil_link" href="../Categorias/Categorias.Html">Lista de Categorías</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Proveedores" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/proovedor.svg">
+                            Proveedores
+                        </button>
+                        <ul class="submenu">
+                            <li><a class="perfil_link" href="/Proovedores/RegistrarProveedor.html">Registrar Proveedor</a></li>
+                            <li><a class="perfil_link" href="../Proovedores/Proovedores.Html">Lista de Proveedores</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Inventario" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inventario.svg">
+                            Inventario
+                        </button>
+                        <ul class="submenu">
+                            <!--
+                            <li><a class="perfil_link" href="/Ventas/Ventas.Html">Historial de Ventas</a></li>
+                            <li><a class="perfil_link" href="../Compras/Compras.Html">Historial de Compras</a></li>-->
+                            <li><a class="perfil_link" href="/Inventario/Inventario.Html">Inventario Actual</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Ventas" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/Ventas_original.svg">
+                            Ventas
+                        </button>
+                        <ul class="submenu">
+                            <li><a class="perfil_link" href="/Ventas/AgregarVenta.html">Realizar Venta</a></li>
+                            <li><a class="perfil_link" href="../Ventas/Ventas.Html">Historial de Ventas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Compras" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/compras.svg">
+                            Compras
+                        </button>
+                        <ul class="submenu">
+                             <li><a class="perfil_link" href="../Compras/AgregarCompra.Html">Realizar Compra</a></li>
+                              <li><a class="perfil_link" href="../Compras/Compras.Html">Historial de Compras</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="perfilrc">
+                      <a class="perfil_link" id="logout">
+                        <img class="Icons_Inicio" alt="Perfil"
+                            src="../Inicio/Imagenes_Inicio/Iconos/logout.svg">
+                        <p class="Text_LinkPerfil">Cerrar Sesion</p>
+                    </a> 
+                    </a>
+                </div>
+            </div>
+
+       <div class="contenido_inicio">
+    <!-- Contenido principal de la página de compras -->
+    <h1 class="titulo-modulo">Gestión de Compras</h1>
+
+    <div class="formulario"> 
+        <!-- Encabezado principal de la tarjeta de compra -->
+        <div class="formulario-header">
+            <h2>Agregar Nueva Compra</h2>
+        </div>
+
+        <!-- Formulario con los datos generales de la compra -->
+        <form id="form-agregar-compra">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="proveedor">Proveedor</label>
+                    <div class="input-icon" data-icon="🏢">
+                        <select id="proveedor" name="proveedor" required>
+                            <option value="">Seleccione un proveedor</option>
+                        </select>
+                    </div>
+                </div>
+               <!--
+                <div class="form-group">
+                    <label for="metodoPago">Método de Pago</label>
+                    <div class="input-icon" data-icon="💳">
+                        <select id="metodoPago" name="metodoPago" required>
+                            <option value="">Seleccione un método</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Transferencia">Transferencia</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                        </select>
+                    </div>
+                </div>
+                 -->
+
+                 <!--
+                <div class="form-group">
+                    <label for="estado">Estado</label>
+                    <div class="input-icon" data-icon="🔄">
+                        <select id="estado" name="estado" required>
+                            <option value="">Seleccione un estado</option>
+                            <option value="Recibido">Recibido</option>
+                            <option value="Pendiente">Pendiente</option>
+                        </select>
+                    </div>
+                </div>
+               -->
+                <div class="form-group">
+                    <label for="fecha">Fecha</label>
+                    <div class="input-icon" data-icon="📅">
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="observaciones">Observaciones</label>
+                    <div class="input-icon" data-icon="📝">
+                         <input type="text" id="observaciones" name="observaciones" required>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Sección de detalle de compra, colocada dentro de la misma tarjeta -->
+        <div class="formulario-header" style="margin-top: 24px;"><!--un estilo basico dog de margin de espacio-->
+            <h2>Detalle Compra</h2>
+        </div>
+
+        <!-- Formulario para agregar un producto al detalle de la compra -->
+        <form id="form-agregar-detalle">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="producto">Producto</label>
+                    <div class="input-icon" data-icon="📦">
+                        <select id="producto" name="producto" required>
+                            <option value="">Seleccione un producto</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidad">Cantidad</label>
+                    <div class="input-icon" data-icon="🔢">
+                        <input type="number" id="cantidad" name="cantidad" placeholder="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="precioUnitario">Precio Unitario</label>
+                    <div class="input-icon" data-icon="💰">
+                        <input type="number" id="precioUnitario" name="precioUnitario" placeholder="C$ 0.00" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subtotal">Subtotal</label>
+                    <div class="input-icon" data-icon="🧾">
+                        <input type="number" id="subtotal" name="subtotal" placeholder="C$ 0.00" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="boton-agregar">Agregar Compra</button>
+                </div>
+
+            </div>
+        </form>
+
+    <!--creamos tala para mostrar la ventas realizadas y imprimir factura de compra-->
+    <div class="Compra-container">
+
+        <div class="compras-header">
+            <h3>Compras agregadas</h3>
+        </div>
+       
+        <table class="carrito-compra">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>observaciones</th>
+                    <th>total</th> 
+                    <th>fecha</th>
+                    <th>cantidad</th>
+                    <th>precio Unitario</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <!--thead para verificar los productos agregados-->
+            <thead>
+                <tbody id class="compraBody">
+                    <tr>
+                    <td colspan="8" class="compra-row">No hay compras de productos agregadas. </td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+
+          <!--creamos en la parte de abajo para el total de la compras-->
+          <div class="footer-compras">
+            <div class="compras-total">Total: C$ <span id="compraTotal">0.00</span></div>
+            <button id="finalizarcompra" type="button" class="bton-finalizado">Generar factura</button>
+          </div>
+
+    </div>
+
+
+
+  
+ </div>
+
+ </div>
+
+ </section>
+ </div>
+
+ <script src="../shared/CodeGeneralInterface.js/Menu.js"></script>
+<script src="../shared/CodeGeneralInterface.js/Sidebar.js"></script>
+<script src="../shared/CodeGeneralInterface.js/Sesion.js"></script>
+<script type="module" src="../shared/CodeGeneralInterface.js/Endpoints/registrarCompra.js"></script>
+<script src="../shared/CodeGeneralInterface.js/logout.js"></script>
+
+</body>
+</html>

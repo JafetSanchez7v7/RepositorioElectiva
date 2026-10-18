@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+font-size: 62.3%;
+}
+
+body{
+font-family: "Open Sans", sans-serif;
+font-size:1.4rem;
+background-color: #FFFFFF; 
+border: 2px solid rgba(0, 136, 255, 0.636);
+padding: 0.2rem;
+margin: 0.2rem;
+}
+
+.conteiner_login{
+display: flex;
+height: 100vh;
+align-items: center;
+justify-content: center;
+}
+
+.login_content{
+background-color: #F9FAFB;
+border-radius: 2rem;
+padding: 4rem;
+max-width: 45rem;
+width: 90%;
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6); /*La sombra de siempre*/
+border: 1px solid rgba(0, 136, 255, 0.636);
+}
+
+.form_titulo{
+color: #1f85c0;
+font-size: 3.6rem;
+text-align: center;
+margin-bottom: 3.7rem;
+}
+
+.form_campo{
+margin-bottom: 3rem;
+}
+
+.form_label{
+    display:block;
+    margin-bottom: 0.5rem;
+    color: #1f85c0 ; 
+}
+
+.form_input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #1f85c0;
+    font-size:1.4rem;
+    color:#333;
+
+}
+
+.form_butom{
+width: 100%;
+padding: 1.5rem;
+background-color:#1f85c0;
+color:#fff;
+border-radius: 2rem;
+border: none;
+font-size: 2rem;
+font-weight: bold;
+cursor:pointer;
+}
+
+.form_butom:hover{
+background-color: #254a5f;
+transition:  0.5s ease; 
+}
+
+
+
+.pantalla-carga{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#f8fafc;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader-contenido{
+    text-align:center;
+}
+
+.loader-contenido img{
+    width:120px;
+    height:120px;
+    margin-bottom:15px;
+    animation:flotar 2s infinite ease-in-out;
+}
+
+.loader-contenido h2{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.loader{
+    width:60px;
+    height:60px;
+    border:6px solid #ddd;
+    border-top:6px solid #2563eb;
+    border-radius:50%;
+    animation:girar 1s linear infinite;
+    margin:auto;
+}
+
+.loader-contenido p{
+    margin-top:15px;
+    color:#555;
+}
+
+@keyframes girar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes flotar{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+

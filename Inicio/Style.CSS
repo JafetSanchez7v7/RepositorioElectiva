@@ -1,0 +1,521 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.main-container{
+    display:grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px auto 60px;
+
+    grid-template-areas: 
+    "header header"
+    "section section"
+    "footer footer";
+}
+
+.nav_header{
+    display: flex;
+    align-items:center;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-menu{
+    position:absolute;
+    left:7px;
+    background:#1e3a5f;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:20px;
+    z-index:100;
+}
+
+.sidebar.oculto{
+    display:none;
+}
+
+.header-contenedor{
+    grid-area: header;
+  background: linear-gradient(to right, #1e3a5f, #2563eb, #1e3a5f);/*    background: linear-gradient(to right, #1f85c0, #4fc3f7, #3387db, #1b51a1);*/
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 15px;
+    position: relative;
+}
+
+.logo{
+     width:90px;
+    height:85px;
+    position: absolute; /*Se despega del row pa centrarlo esta en el contenedor padre*/
+    left: 50px; /*lo mueve desde izquierda*/
+}
+
+.titulo{
+    color: #FFFFFF;
+    font-size: 33px;
+    font-weight: 600;
+    letter-spacing: 1px; 
+    text-align: center;
+}
+
+.section-contenedor{
+    grid-area: section;
+    display:flex;
+    height:100%;
+}
+
+.Icons_Inicio{
+    width:25px; 
+    height:auto;  
+}
+
+.sidebar{
+    width:220px;
+    background-color: rgba(100, 130, 195, 0.15); 
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    color:#444;
+    border-radius:11px;
+}
+
+.sidebar > ul{  /*> agregue esto para que no me afecte en los btn (none) en resumen pa que esten cerrado desde el inicio*/
+    list-style:none;
+    display:flex; 
+    flex-direction:column;
+    flex-grow:1; 
+    gap:25px;
+}
+
+.sidebar ul li{
+    padding:10px;
+    margin-bottom:10px;
+    background:rgba(212, 226, 247, 0.95);
+    border-radius:6px;
+    text-align:center;
+    width: auto;
+    height:40px;
+    display: flex;
+    justify-content: flex-start; 
+    gap:10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover{
+    background:  rgba(162, 192, 236, 0.95);/*rgb(0 0 0 / 5%);  preguntar cual de los dos se mire mejor  */
+    cursor:pointer;
+    color:#FFFFFF;
+}
+
+.perfil{
+    margin-top:auto;
+    padding:10px;
+  background: rgba(212, 226, 247, 0.7);
+    border-radius:6px;
+    cursor:pointer;
+    text-align: center;
+}
+
+.perfil_link{
+color:#444;   
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    width:100%;
+    height:100%;
+} 
+
+.Text_LinkPerfil{
+    text-align:center;
+} 
+
+.contenido_inicio{
+    flex:1;
+    background-color:#F9FAFB;
+    padding:25px;
+    min-height:100vh;
+}
+
+.card{
+    background:#FFFFFF;
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+}
+
+.footer{
+    grid-area: footer;
+  background: linear-gradient(to right, #1e3a5f, #2563eb, #1e3a5f);
+    color:#9CA3AF;
+    text-align:center;
+    padding:3px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.Icons{
+    display:flex;
+    gap:20px;
+}
+
+.card h3{
+    margin-bottom:5px;
+    color:#0d4dbb;
+}
+
+.banner-card{
+    height:180px;
+    border-radius:13px;
+    margin-top:15px;
+
+    background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("Imagenes_Inicio/b3.jpeg");
+
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    display:flex;
+    align-items:center;
+    padding:20px;
+    color:white;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:  repeat(3, 1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+.dashboard-card{
+    text-align:center;
+    padding:20px;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover{
+    transform: translateY(-5px);  /* Efecto hacia arriba*/
+} 
+
+.numero{
+    font-size:28px;
+    font-weight:bold;
+    color:#134fa3;
+    margin-top:10px;
+}
+/* 
+Tablet maximo de ancho de 900 */
+
+@media (max-width: 900px){
+
+    .dashboard{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .titulo{
+        font-size:26px;
+    }
+
+}
+
+
+/* 
+celulares maximos de ancho de 600 */
+
+@media (max-width: 600px){
+
+    .section-contenedor{
+        flex-direction:column;
+    }
+
+     .logo{
+        position:static;
+        width:70px;
+        height:70px;
+    }
+
+    .sidebar{
+        width:100%;
+        padding:10px;
+    }
+
+    .sidebar ul{
+        gap:10px;
+    }
+
+    .sidebar ul li{
+        height:auto;
+        padding:12px;
+    }
+
+      .nav_header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .contenido_inicio{
+        padding:15px;
+        height:auto;
+    }
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+     .banner-card{
+        height:140px;
+    }
+
+    .titulo{
+        font-size:22px;
+        text-align:center;
+    }
+}
+
+/*Tarea para todos: Implementar mejor el responsive en este caso de 600px para que el sidebar se mire en un menu burger*/
+
+/*Dashboard card color*/
+
+.total-productos{
+        background-image:url("/Inicio/Imagenes_Inicio/3dc083d25ceb371fe605174966a2906b.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.total-roles{
+     background-image:url("/Inicio/Imagenes_Inicio/3dc083d25ceb371fe605174966a2906b.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.total-inventario{
+         background-image:url("/Inicio/Imagenes_Inicio/3dc083d25ceb371fe605174966a2906b.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.total-usuarios{
+         background-image:url("/Inicio/Imagenes_Inicio/3dc083d25ceb371fe605174966a2906b.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.total-categorias{
+       background-image:url("/Inicio/Imagenes_Inicio/3dc083d25ceb371fe605174966a2906b.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.total-ventas{
+     background-image:url("/Inicio/Imagenes_Inicio/3dc083d25ceb371fe605174966a2906b.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+
+
+.dropdown-btn{
+    color:#444;
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    width:100%;
+    height:100%;
+
+    background:none;
+    border:none;
+
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* CONTENEDOR DEL DROPDOWN */
+.dropdown{
+    flex-direction:column;
+    align-items:flex-start !important;
+    height:auto !important;
+}
+
+/* SUBMENU OCULTO */
+.submenu{
+    display:none;
+
+    width:100%;
+    margin-top:10px;
+    padding-left:10px;
+}
+
+/* CUANDO SE ABRE */
+.submenu.activo{
+    display:block;
+}
+
+/* ITEMS DEL SUBMENU */
+.submenu li{
+    width:100%;
+    height:auto !important;
+
+    padding:10px;
+    margin-bottom:5px;
+
+    background:rgba(255,255,255,0.7) !important;
+    border-radius:6px;
+}
+
+/* LINKS DEL SUBMENU */
+.submenu .perfil_link{
+    width:100%;
+    height:100%;
+
+    display:flex;
+    align-items:center;
+
+    color:#444;
+    text-decoration:none;
+}
+
+/* HOVER */
+.submenu li:hover{
+    background:rgba(162, 192, 236, 0.95) !important;
+}
+
+
+
+
+
+/* PERFIL EN EL HEADER */
+.header-usuario {
+    position: absolute;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(115, 104, 235, 0.099);
+    padding: 8px 18px;
+    border-radius: 15px;
+    /* border: 1px solid rgba(0, 44, 157, 0.2); */
+    transition: .3s;
+}
+
+.header-usuario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.header-usuario img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.saludo {
+    color: #dbeafe;
+    font-size: 11px;
+}
+
+.info-usuario h4 {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rol-header {
+    background: white;
+    color: #15264c;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: max-content;
+    margin-top: 2px;
+}
+
+/*dashboard power BI*/
+
+.powerbi-card{
+    margin-top:20px;
+    background:#FFFFFF;
+    border-radius:15px;
+    padding:20px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.titulo-dashboard{
+    color:#1e3a5f;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.powerbi-card iframe{
+    width:100%;
+    height:700px;
+
+    border:none;
+    border-radius:12px;
+}
+
+.perfil_improvisado{
+cursor: pointer;
+}

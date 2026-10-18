@@ -1,0 +1,86 @@
+body{
+    background:#f4f6f9;
+    font-family:'Segoe UI',sans-serif;
+    padding:30px;
+}
+
+.factura{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.encabezado{
+    text-align:center;
+    border-bottom:3px solid #2563eb;
+    padding-bottom:15px;
+}
+
+.encabezado h1{
+    color:#1e3a5f;
+    margin:0;
+}
+
+.encabezado p{
+    color:#666;
+}
+
+.info-venta{
+    margin:25px 0;
+    display:flex;
+    justify-content:space-between;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#2563eb;
+    color:white;
+}
+
+th,td{
+    padding:12px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+.total-container{
+    text-align:right;
+    margin-top:20px;
+}
+
+.total-container h2{
+    color:#2563eb;
+}
+
+.btn-imprimir{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+@media print{
+
+    .btn-imprimir{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .factura{
+        box-shadow:none;
+    }
+
+}
