@@ -1,258 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Compras.CSS">
     <title>Compras - Veterinaria M&L</title>
 </head>
+
 <body>
+
     <div class="main-container">
+
+        <!-- ENCABEZADO PRINCIPAL -->
         <header class="header-contenedor">
-             <nav class="nav_header">
+            <nav class="nav_header">
 
-            <button id="btnMenu" class="btn-menu">
-                ☰
-            </button>
+                <button id="btnMenu" class="btn-menu" aria-label="Abrir menú">
+                    ☰
+                </button>
 
-            <img src="/Compras/Imagenes_Inicio/imagen.png" 
-            alt="Logo Veterinaria M&L" 
-            class="logo">
-
-            <h1 class="titulo">
-                Veterinaria M&L
-            </h1>
+                <div class="brand-group">
+                    <img src="/Compras/Imagenes_Inicio/imagen.png" alt="Logo Veterinaria M&L" class="logo">
+                    <h1 class="titulo">Veterinaria M&L</h1>
+                </div>
 
                 <div class="header-usuario perfil_improvisado">
                     <img src="/Inicio/Imagenes_Inicio/porfile1.jpg" alt="Usuario">
                     <div class="info-usuario perfil_improvisado">
-                        
                         <a class="saludo perfil_improvisado" onclick="window.location.href='.././Perfil_Usuario/Perfil.Html'">Hola,</a>
-                        <h4 id="nombreHeader" class="perfil_improvisado"></h4>
+                        <h4 id="nombreHeader" class="perfil_improvisado">Administrador</h4>
                         <span id="rolHeader" class="rol-header perfil_improvisado">Administrador</span>
-                        
                     </div>
                 </div>
 
-        </nav>
+            </nav>
         </header>
 
         <section class="section-contenedor">
-            
-    
-<div class="sidebar">
 
-<ul class="sidebar_ul">
+            <!-- BARRA LATERAL (SIDEBAR) -->
+            <div class="sidebar">
 
-<li>
-    <a class="perfil_link" href="../Inicio/Index.html">
-        <img alt="Inicio" class="Icons_Inicio " src="../Inicio/Imagenes_Inicio/Iconos/inicio.svg">
-        Inicio
-    </a>
-</li>
+                <ul class="sidebar_ul">
 
-<li class="dropdown">
+                    <li>
+                        <a class="perfil_link" href="../Inicio/Index.html">
+                            <img alt="Inicio" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inicio.svg">
+                            Inicio
+                        </a>
+                    </li>
 
-<button class="dropdown-btn">
-    <img alt="Productos" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/producto.svg">
-    Productos
-</button>
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Productos" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/producto.svg">
+                            Productos
+                        </button>
+                        <ul class="submenu">
+                            <li>
+                                <a class="perfil_link" href="/Productos/RegistrarProducto.html">Registrar Producto</a>
+                            </li>
+                            <li>
+                                <a class="perfil_link" href="../Productos/Productos.Html">Lista de Productos</a>
+                            </li>
+                        </ul>
+                    </li>
 
-<ul class="submenu">
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Categorias" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/categorias.svg">
+                            Categorias
+                        </button>
+                        <ul class="submenu">
+                            <li>
+                                <a class="perfil_link" href="/Categorias/AgregarCategoria.html">Registrar Categoría</a>
+                            </li>
+                            <li>
+                                <a class="perfil_link" href="../Categorias/Categorias.Html">Lista de Categorías</a>
+                            </li>
+                        </ul>
+                    </li>
 
-    <li>
-        <a class="perfil_link" href="/Productos/RegistrarProducto.html">
-            Registrar Producto
-        </a>
-    </li>
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Proveedores" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/proovedor.svg">
+                            Proveedores
+                        </button>
+                        <ul class="submenu">
+                            <li>
+                                <a class="perfil_link" href="/Proovedores/RegistrarProveedor.html">Registrar Proveedor</a>
+                            </li>
+                            <li>
+                                <a class="perfil_link" href="../Proovedores/Proovedores.Html">Lista de Proveedores</a>
+                            </li>
+                        </ul>
+                    </li>
 
-    <li>
-        <a class="perfil_link" href="../Productos/Productos.Html">
-            Lista de Productos
-        </a>
-    </li>
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Inventario" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inventario.svg">
+                            Inventario
+                        </button>
+                        <ul class="submenu">
+                            <li>
+                                <a class="perfil_link" href="/Inventario/Inventario.Html">Inventario Actual</a>
+                            </li>
+                        </ul>
+                    </li>
 
-</ul>
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Ventas" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/Ventas_original.svg">
+                            Ventas
+                        </button>
+                        <ul class="submenu">
+                            <li>
+                                <a class="perfil_link" href="/Ventas/AgregarVenta.html">Realizar Venta</a>
+                            </li>
+                            <li>
+                                <a class="perfil_link" href="../Ventas/Ventas.Html">Historial de Ventas</a>
+                            </li>
+                        </ul>
+                    </li>
 
-</li>
+                    <li class="dropdown">
+                        <button class="dropdown-btn">
+                            <img alt="Compras" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/compras.svg">
+                            Compras
+                        </button>
+                        <ul class="submenu">
+                            <li><a class="perfil_link" href="../Compras/AgregarCompra.Html">Realizar Compra</a></li>
+                            <li><a class="perfil_link" href="../Compras/Compras.Html">Historial de Compras</a></li>
+                        </ul>
+                    </li>
 
-<li class="dropdown">
+                </ul>
 
-<button class="dropdown-btn">
-    <img alt="Categorias" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/categorias.svg">
-    Categorias
-</button>
-
-<ul class="submenu">
-
-    <li>
-        <a class="perfil_link" href="/Categorias/AgregarCategoria.html"> 
-            Registrar Categoría
-        </a>
-    </li>
-
-    <li>
-        <a class="perfil_link" href="../Categorias/Categorias.Html">
-            Lista de Categorías
-        </a>
-    </li>
-
-</ul>
-
-</li>
-
-<li class="dropdown">
-
-<button class="dropdown-btn">
-    <img alt="Proveedores" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/proovedor.svg">
-    Proveedores
-</button>
-
-<ul class="submenu">
-
-    <li>
-        <a class="perfil_link" href="/Proovedores/RegistrarProveedor.html"> 
-            Registrar Proveedor
-        </a>
-    </li>
-
-    <li>
-        <a class="perfil_link" href="../Proovedores/Proovedores.Html">
-            Lista de Proveedores
-        </a>
-    </li>
-
-</ul>
-
-</li>
-
-<li class="dropdown">
-
-<button class="dropdown-btn">
-    <img alt="Inventario" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inventario.svg">
-    Inventario
-</button>
-
-<ul class="submenu">
-<!--
-    <li>
-        <a class="perfil_link" href="/Ventas/Ventas.Html">
-            Historial de Ventas 
-        </a>
-    </li>
-
-    <li>
-        <a class="perfil_link" href="/Compras/Compras.Html">
-            Historial de Compras
-        </a>
-    </li>
--->
-    <li>
-        <a class="perfil_link" href="/Inventario/Inventario.Html">
-            Inventario Actual
-        </a>
-    </li>
-
-</ul>
-
-</li>
-
-<li class="dropdown">
-
-<button class="dropdown-btn">
-    <img alt="Ventas" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/Ventas_original.svg">
-    Ventas
-</button>
-
-<ul class="submenu">
-
-    <li>
-        <a class="perfil_link" href="/Ventas/AgregarVenta.html"> 
-            Realizar Venta
-        </a>
-    </li>
-
-    <li>
-        <a class="perfil_link" href="../Ventas/Ventas.Html">
-            Historial de Ventas
-        </a>
-    </li>
-
-</ul>
-
-</li>
-
-<li class="dropdown">
-    <button class="dropdown-btn">
-        <img alt="Compras" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/compras.svg">
-        Compras
-    </button>
-    <ul class="submenu">
-        <li><a class="perfil_link" href="../Compras/AgregarCompra.Html">Realizar Compra</a></li>
-        <li><a class="perfil_link" href="../Compras/Compras.Html">Historial de Compras</a></li>
-    </ul>
-</li>
-
-</ul>
-        
-                <div class="perfilc">
-                     <a class="perfil_link" id="logout">
-                        <img class="Icons_Inicio" alt="Perfil"
-                            src="../Inicio/Imagenes_Inicio/Iconos/logout.svg">
-                        <p class="Text_LinkPerfil">Cerrar Sesion</p>
-                    </a> 
+                <!-- Soporta tanto la clase perfilc como perfil -->
+                <div class="perfil perfilc">
+                    <a class="perfil_link" id="logout">
+                        <img class="Icons_Inicio" alt="Perfil" src="../Inicio/Imagenes_Inicio/Iconos/logout.svg">
+                        <p class="Text_LinkPerfil">Cerrar Sesión</p>
+                    </a>
                 </div>
+
             </div>
 
+            <!-- CONTENIDO PRINCIPAL -->
+            <div class="contenido_inicio">
 
-         <div class="contenido_inicio">
-                <h1 class="titulo-modulo">Gestión de Compras</h1>
+                <div class="modulo-header-wrapper">
+                    <div>
+                        <h1 class="titulo-modulo">Gestión de Compras</h1>
+                        <p class="subtitulo-modulo">Historial general de adquisiciones e ingresos a inventario</p>
+                    </div>
+                    <button class="btn-agregar" onclick="location.href='AgregarCompra.Html'">
+                        <span>+</span> Realizar Compra
+                    </button>
+                </div>
 
-                <div id="seccion-lista">
+                <div id="seccion-lista" class="seccion-lista-card">
+                    
                     <div class="Compras-header">
-                        <button class="btn-agregar" onclick="location.href='AgregarCompra.Html'">+ Agregar Compra</button>
-                        <input type="text" placeholder="Buscar compra..." class="buscador">
+                        <div class="search-input-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" placeholder="Buscar compra por proveedor, fecha u observaciones..." class="buscador">
+                        </div>
                     </div>
 
+                    <!-- MENSAJE DE ESTADO / ALERTA DE JAVASCRIPT -->
+                    <div id="mensaje"></div>
 
-        <div id="mensaje" style="color:red; font-weight:bold; margin:10px 0;"></div>
-             <div class="tabla-contenedor">
+                    <!-- CONTENEDOR DE LA TABLA DE COMPRAS -->
+                    <div class="tabla-contenedor">
                         <table class="tabla-Compras">
                             <thead>
-                                <tr> <th>id_Compra</th>
-                                    <th>id_Proveedor</th>
-                                    <th>fecha_Compra</th>
-                                    <th>total</th>
-                                    <th>observaciones</th>
-                                    <th>Acciones</th>
-                                   
+                                <tr>
+                                    <th>ID Compra</th>
+                                    <th>ID Proveedor</th>
+                                    <th>Fecha de Compra</th>
+                                    <th>Total</th>
+                                    <th>Observaciones</th>
+                                    <th style="text-align: center;">Acciones</th>
                                 </tr>
                             </thead>
-
                             <tbody>
-                              </tbody>
-                       
-                     
+                                <!-- Filas dinámicas generadas por JS -->
+                            </tbody>
                         </table>
-                          
                     </div>
-</div> 
-</div> </section> <footer class="footer">
-           
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="footer">
+            <p>&copy; 2026 Veterinaria M&L — Sistema de Gestión Integral</p>
         </footer>
 
-</div>
+    </div>
 
-<script src="../shared/CodeGeneralInterface.js/Menu.js"></script>
-<script src="../shared/CodeGeneralInterface.js/Sidebar.js"></script>
-<script src="../shared/CodeGeneralInterface.js/Sesion.js"></script>
-
-<script src="index.js"></script>
-
-  <script src="../shared/CodeGeneralInterface.js/logout.js"></script>
-  <script type="module" src="../shared/CodeGeneralInterface.js/Endpoints/compra.js"></script>
-
-
+    <!-- SCRIPTS -->
+    <script src="../shared/CodeGeneralInterface.js/Menu.js"></script>
+    <script src="../shared/CodeGeneralInterface.js/Sidebar.js"></script>
+    <script src="../shared/CodeGeneralInterface.js/Sesion.js"></script>
+    <script src="index.js"></script>
+    <script src="../shared/CodeGeneralInterface.js/logout.js"></script>
+    <script type="module" src="../shared/CodeGeneralInterface.js/Endpoints/compra.js"></script>
 
 </body>
+
 </html>

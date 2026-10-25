@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Style.CSS">
     <title>Veterinaria M&L</title>
-
 </head>
 
 <body>
@@ -16,25 +16,22 @@
 
             <nav class="nav_header">
 
-                <button id="btnMenu" class="btn-menu">
+                <button id="btnMenu" class="btn-menu" aria-label="Abrir menú">
                     ☰
                 </button>
 
-                <img src="Imagenes_Inicio/imagen.png" alt="Logo Veterinaria M&L" class="logo">
-
-                <h1 class="titulo">
-                    Veterinaria M&L
-                </h1>
+                <div class="brand-group">
+                    <img src="Imagenes_Inicio/imagen.png" alt="Logo Veterinaria M&L" class="logo">
+                    <h1 class="titulo">Veterinaria M&L</h1>
+                </div>
 
                 <div class="header-usuario perfil_improvisado">
                     <img src="/Inicio/Imagenes_Inicio/porfile1.jpg" alt="Usuario">
                     <div class="info-usuario perfil_improvisado">
-
                         <a class="saludo perfil_improvisado"
                             onclick="window.location.href='.././Perfil_Usuario/Perfil.Html'">Hola,</a>
-                        <h4 id="nombreHeader" class="perfil_improvisado"></h4>
+                        <h4 id="nombreHeader" class="perfil_improvisado">Administrador</h4>
                         <span id="rolHeader" class="rol-header perfil_improvisado">Administrador</span>
-
                     </div>
                 </div>
 
@@ -44,151 +41,110 @@
 
         <section class="section-contenedor">
 
-            <div class="sidebar"> <!--sidebar-->
+            <div class="sidebar">
 
                 <ul class="sidebar_ul">
 
                     <li>
                         <a class="perfil_link" href="../Inicio/Index.html">
-                            <img alt="Inicio" class="Icons_Inicio " src="../Inicio/Imagenes_Inicio/Iconos/inicio.svg">
+                            <img alt="Inicio" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inicio.svg">
                             Inicio
                         </a>
                     </li>
 
                     <li class="dropdown">
-
                         <button class="dropdown-btn">
                             <img alt="Productos" class="Icons_Inicio"
                                 src="../Inicio/Imagenes_Inicio/Iconos/producto.svg">
                             Productos
                         </button>
-
                         <ul class="submenu">
-
                             <li>
                                 <a class="perfil_link" href="/Productos/RegistrarProducto.html">
                                     Registrar Producto
                                 </a>
                             </li>
-
                             <li>
                                 <a class="perfil_link" href="../Productos/Productos.Html">
                                     Lista de Productos
                                 </a>
                             </li>
-
                         </ul>
-
                     </li>
 
                     <li class="dropdown">
-
                         <button class="dropdown-btn">
                             <img alt="Categorias" class="Icons_Inicio"
                                 src="../Inicio/Imagenes_Inicio/Iconos/categorias.svg">
                             Categorias
                         </button>
-
                         <ul class="submenu">
-
                             <li>
                                 <a class="perfil_link" href="/Categorias/Categorias.Html">
                                     Registrar Categoría
                                 </a>
                             </li>
-
                             <li>
                                 <a class="perfil_link" href="../Categorias/Categorias.Html">
                                     Lista de Categorías
                                 </a>
                             </li>
-
                         </ul>
-
                     </li>
 
                     <li class="dropdown">
-
                         <button class="dropdown-btn">
                             <img alt="Proveedores" class="Icons_Inicio"
                                 src="../Inicio/Imagenes_Inicio/Iconos/proovedor.svg">
                             Proveedores
                         </button>
-
                         <ul class="submenu">
-
                             <li>
                                 <a class="perfil_link" href="/Proovedores/RegistrarProveedor.html">
                                     Registrar Proveedor
                                 </a>
                             </li>
-
                             <li>
                                 <a class="perfil_link" href="../Proovedores/Proovedores.Html">
                                     Lista de Proveedores
                                 </a>
                             </li>
-
                         </ul>
-
                     </li>
 
                     <li class="dropdown">
-
                         <button class="dropdown-btn">
                             <img alt="Inventario" class="Icons_Inicio"
                                 src="../Inicio/Imagenes_Inicio/Iconos/inventario.svg">
                             Inventario
                         </button>
-
                         <ul class="submenu">
-                            <!--
-    <li>
-        <a class="perfil_link" href="/Ventas/Ventas.Html">
-            Historial de Ventas 
-        </a>
-    </li>
-
-    <li>
-        <a class="perfil_link" href="/Compras/Compras.Html">
-            Historial de Compras
-        </a>
-    </li>
--->
                             <li>
                                 <a class="perfil_link" href="/Inventario/Inventario.Html">
                                     Inventario Actual
                                 </a>
                             </li>
-
                         </ul>
-
                     </li>
 
                     <li class="dropdown">
-
                         <button class="dropdown-btn">
                             <img alt="Ventas" class="Icons_Inicio"
                                 src="../Inicio/Imagenes_Inicio/Iconos/Ventas_original.svg">
                             Ventas
                         </button>
-
                         <ul class="submenu">
-
                             <li>
                                 <a class="perfil_link" href="/Ventas/AgregarVenta.html">
                                     Realizar Venta
                                 </a>
                             </li>
-
                             <li>
                                 <a class="perfil_link" href="../Ventas/Ventas.Html">
                                     Historial de Ventas
                                 </a>
                             </li>
-
                         </ul>
-
                     </li>
 
                     <li class="dropdown">
@@ -202,29 +158,88 @@
                         </ul>
                     </li>
 
-
                 </ul>
 
-               
                 <div class="perfil">
                     <a class="perfil_link" id="logout">
-                        <img class="Icons_Inicio" alt="Perfil"
+                        <img class="Icons_Inicio" alt="Cerrar sesión"
                             src="../Inicio/Imagenes_Inicio/Iconos/logout.svg">
-                        <p class="Text_LinkPerfil">Cerrar Sesion</p>
-                    </a> 
+                        <p class="Text_LinkPerfil">Cerrar Sesión</p>
+                    </a>
                 </div>
+
             </div>
 
             <div class="contenido_inicio">
+
                 <h1>Bienvenido al sistema</h1>
 
+                <!-- BANNER INFORMATIVO -->
                 <div class="banner-card">
                     <div class="overlay">
-                        <h2>Veterinaria M&L </h2>
-                        <p>Control total de inventario y ventas</p>
+                        <h2>Veterinaria M&L</h2>
+                        <p>Control total de inventario, proveedores y registro de ventas</p>
                     </div>
                 </div>
 
+                <!-- SECCIÓN DE KPIS / METRICAS RELEVANTE -->
+                <div class="dashboard-kpis">
+
+                    <div class="kpi-card blue">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Ventas del Día</span>
+                            <div class="kpi-icon-wrapper">
+                                <img src="../Inicio/Imagenes_Inicio/Iconos/Ventas_original.svg" alt="Ventas" class="Icons_Inicio">
+                            </div>
+                        </div>
+                        <div class="kpi-body">
+                            <span class="kpi-value">$1,240.00</span>
+                            <span class="kpi-badge positivo">↑ +12.5%</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card teal">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Productos en Stock</span>
+                            <div class="kpi-icon-wrapper">
+                                <img src="../Inicio/Imagenes_Inicio/Iconos/producto.svg" alt="Productos" class="Icons_Inicio">
+                            </div>
+                        </div>
+                        <div class="kpi-body">
+                            <span class="kpi-value">482</span>
+                            <span class="kpi-badge neutro">Normal</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card amber">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Alertas de Inventario</span>
+                            <div class="kpi-icon-wrapper">
+                                <img src="../Inicio/Imagenes_Inicio/Iconos/inventario.svg" alt="Inventario" class="Icons_Inicio">
+                            </div>
+                        </div>
+                        <div class="kpi-body">
+                            <span class="kpi-value">5 prod.</span>
+                            <span class="kpi-badge negativo">⚠ Stock Bajo</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card purple">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Proveedores Activos</span>
+                            <div class="kpi-icon-wrapper">
+                                <img src="../Inicio/Imagenes_Inicio/Iconos/proovedor.svg" alt="Proveedores" class="Icons_Inicio">
+                            </div>
+                        </div>
+                        <div class="kpi-body">
+                            <span class="kpi-value">18</span>
+                            <span class="kpi-badge positivo">Al día</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- TARJETA POWER BI -->
                 <div class="powerbi-card">
                     <h2 class="titulo-dashboard">
                         Dashboard Analítico Veterinaria M&L
@@ -240,6 +255,7 @@
         </section>
 
         <footer class="footer">
+            <p>&copy; 2026 Veterinaria M&L — Sistema de Gestión Integral</p>
         </footer>
 
     </div>

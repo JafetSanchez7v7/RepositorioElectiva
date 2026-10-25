@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Producto - Veterinaria M&L</title>
     <link rel="stylesheet" href="/Productos/RegistrarProducto.CSS">
 </head>
+
 <body>
+
     <div class="main-container">
+
+        <!-- ENCABEZADO PRINCIPAL -->
         <header class="header-contenedor">
             <nav class="nav_header">
-                <button id="btnMenu" class="btn-menu">☰</button>
-                <img src="/Compras/Imagenes_Inicio/imagen.png" alt="Logo Veterinaria M&L" class="logo">
-                <h1 class="titulo">Veterinaria M&L</h1>
+
+                <button id="btnMenu" class="btn-menu" aria-label="Abrir menú">
+                    ☰
+                </button>
+
+                <div class="brand-group">
+                    <img src="/Compras/Imagenes_Inicio/imagen.png" alt="Logo Veterinaria M&L" class="logo">
+                    <h1 class="titulo">Veterinaria M&L</h1>
+                </div>
+
+                <div class="header-usuario perfil_improvisado">
+                    <img src="/Inicio/Imagenes_Inicio/porfile1.jpg" alt="Usuario">
+                    <div class="info-usuario perfil_improvisado">
+                        <a class="saludo perfil_improvisado" onclick="window.location.href='.././Perfil_Usuario/Perfil.Html'">Hola,</a>
+                        <h4 id="nombreHeader" class="perfil_improvisado">Administrador</h4>
+                        <span id="rolHeader" class="rol-header perfil_improvisado">Administrador</span>
+                    </div>
+                </div>
+
             </nav>
         </header>
 
         <section class="section-contenedor">
-            
+
+            <!-- BARRA LATERAL (SIDEBAR) -->
             <div class="sidebar">
+
                 <ul class="sidebar_ul">
+
                     <li>
                         <a class="perfil_link" href="../Inicio/Index.html">
                             <img alt="Inicio" class="Icons_Inicio" src="../Inicio/Imagenes_Inicio/Iconos/inicio.svg">
                             Inicio
                         </a>
                     </li>
-                    
-                    
 
                     <li class="dropdown">
                         <button class="dropdown-btn">
@@ -68,9 +90,6 @@
                             Inventario
                         </button>
                         <ul class="submenu">
-                            <!--
-                            <li><a class="perfil_link" href="/Ventas/Ventas.Html">Historial de Ventas</a></li>
-                            <li><a class="perfil_link" href="/Compras/Compras.Html">Historial de Compras</a></li>-->
                             <li><a class="perfil_link" href="/Inventario/Inventario.Html">Inventario Actual</a></li>
                         </ul>
                     </li>
@@ -92,83 +111,93 @@
                             Compras
                         </button>
                         <ul class="submenu">
-                             <li><a class="perfil_link" href="../Compras/AgregarCompra.Html">Realizar Compra</a></li>
-                              <li><a class="perfil_link" href="../Compras/Compras.Html">Historial de Compras</a></li>
+                            <li><a class="perfil_link" href="../Compras/AgregarCompra.Html">Realizar Compra</a></li>
+                            <li><a class="perfil_link" href="../Compras/Compras.Html">Historial de Compras</a></li>
                         </ul>
                     </li>
+
                 </ul>
-                
-                <div class="perfilp">
-                        <a class="perfil_link" id="logout">
-                        <img class="Icons_Inicio" alt="Perfil"
-                            src="../Inicio/Imagenes_Inicio/Iconos/logout.svg">
-                        <p class="Text_LinkPerfil">Cerrar Sesion</p>
-                    </a> 
+
+                <div class="perfil perfilp">
+                    <a class="perfil_link" id="logout">
+                        <img class="Icons_Inicio" alt="Cerrar Sesión" src="../Inicio/Imagenes_Inicio/Iconos/logout.svg">
+                        <p class="Text_LinkPerfil">Cerrar Sesión</p>
+                    </a>
                 </div>
+
             </div>
 
+            <!-- CONTENIDO PRINCIPAL DE REGISTRO DE PRODUCTO -->
             <div class="contenido_inicio">
-                <h1 class="titulo-modulo">Gestión de Productos</h1>
-                
-                <div class="formulario"> 
+
+                <div class="modulo-header-wrapper">
+                    <div>
+                        <h1 class="titulo-modulo">Gestión de Productos</h1>
+                        <p class="subtitulo-modulo">Añade nuevos artículos, insumos o medicamentos al catálogo</p>
+                    </div>
+                </div>
+
+                <div class="formulario">
+
                     <div class="formulario-header">
                         <h2>Agregar Nuevo Producto</h2>
                     </div>
-                    
-                  <form id="form-agregar-compras">
-                        <div class="form-grid">
 
+                    <form id="form-agregar-compras">
+                        <div class="form-grid">
 
                             <div class="form-group">
                                 <label for="producto">Producto</label>
                                 <div class="input-icon" data-icon="📦">
                                     <input type="text" id="producto" name="producto" placeholder="Nombre del producto" required>
-                                
                                 </div>
                             </div>
-                         
 
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label for="descripcion">Descripción</label>
                                 <div class="input-icon" data-icon="📝">
-                                <input type="text" id="descripcion" name="descripcion" placeholder="Ingrese la descripción del producto" required>
+                                    <input type="text" id="descripcion" name="descripcion" placeholder="Ingrese la descripción del producto" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="categoria">Categoría</label>
                                 <div class="input-icon" data-icon="📂">
-                                    <select id="categoria" required>
-                                        <option value="">
-                                        Seleccione una categoría
-                                        </option>
+                                    <select id="categoria" name="categoria" required>
+                                        <option value="">Seleccione una categoría</option>
                                     </select>
                                 </div>
                             </div>
 
-
-
-                
-
-
                             <div class="form-actions">
-                                <button type="submit" class="boton-agregar"> Agregar producto</button>
+                                <button type="submit" class="boton-agregar">
+                                    <span>+</span> Agregar producto
+                                </button>
                             </div>
+
                         </div>
                     </form>
+
                 </div>
+
             </div>
 
         </section>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="footer">
+            <p>&copy; 2026 Veterinaria M&L — Sistema de Gestión Integral</p>
+        </footer>
+
     </div>
 
-<script src="../shared/CodeGeneralInterface.js/Menu.js"></script>
-<script src="../shared/CodeGeneralInterface.js/Sidebar.js"></script>
-<script src="../shared/CodeGeneralInterface.js/Sesion.js"></script>
-  <script src="../shared/CodeGeneralInterface.js/logout.js"></script>
+    <!-- SCRIPTS -->
+    <script src="../shared/CodeGeneralInterface.js/Menu.js"></script>
+    <script src="../shared/CodeGeneralInterface.js/Sidebar.js"></script>
+    <script src="../shared/CodeGeneralInterface.js/Sesion.js"></script>
+    <script src="../shared/CodeGeneralInterface.js/logout.js"></script>
+    <script type="module" src="../shared/CodeGeneralInterface.js/Endpoints/registrarproducto.js"></script>
 
-<script type="module" src="../shared/CodeGeneralInterface.js/Endpoints/registrarproducto.js"></script>
-    
 </body>
+
 </html>
-   <!--este es funcionalidad de los bton de agregar compra y la lista es un jvacrips-->
